@@ -1,0 +1,11 @@
+export { Home } from './Home';
+export { ServicesPage } from './ServicesPage';
+export { AdvantagesPage } from './AdvantagesPage';
+export { LocationsPage } from './LocationsPage';
+export { PricingPage } from './PricingPage';
+export { HelpPage } from './HelpPage';
+export { DownloadsPage } from './DownloadsPage';
+export { ContactPage } from './ContactPage';
+export { TermsPage } from './TermsPage';
+export { PrivacyPage } from './PrivacyPage';
+export { NotFoundPage } from './NotFoundPage';

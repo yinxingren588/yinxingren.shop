@@ -1,0 +1,6 @@
+# Cloudflare Pages / Netlify Routing Configuration
+# 确保不存在的路径直接响应 404.html 并返回真实 HTTP 404 状态码
+# 严禁将不存在的路径通配回退到 index.html 返回 200（避免 Soft 404）
+
+/404.html    /404.html    404
+/*           /404.html    404
