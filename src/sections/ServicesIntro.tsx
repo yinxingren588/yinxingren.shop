@@ -30,7 +30,7 @@ export const ServicesIntro: React.FC = () => {
             </h2>
 
             <p className="text-base text-slate-300 leading-relaxed font-normal">
-              {BRAND_NAME}（{BRAND_NAME_EN}）专注于为跨国技术研发团队、数字出海企业及自由职业者提供稳定、清晰且低调务实的网络连接服务指引。借助现代协议混淆与无特征封装技术，有效规避公共网络链路中的嗅探干扰与协议阻断，保障核心远程任务顺畅推进。
+              {BRAND_NAME}官网（{BRAND_NAME_EN}）专注于为跨国技术研发团队、数字出海企业及自由职业者提供客观严谨的{BRAND_NAME}机场网络连接服务指引。借助现代协议混淆与无特征封装技术，有效规避公共网络链路中的嗅探干扰与协议阻断，保障核心远程任务顺畅推进。
             </p>
 
             <p className="text-sm text-slate-400 leading-relaxed">

@@ -62,15 +62,15 @@ export const Hero: React.FC = () => {
             {/* 品牌定位短句 */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-primary border border-brand-border text-xs text-brand-accent font-semibold shadow-subtle">
               <ShieldCheck className="w-4 h-4 text-brand-accent" />
-              <span>第三方服务指引 · 跨境连接与网络隐私认知导航</span>
+              <span>隐形人官网导航 · 隐形人机场评测与出海连接认知指引</span>
             </div>
 
-            {/* 页面唯一 H1：自然融入核心关键词「隐形人」，清晰表达主题 */}
+            {/* 页面唯一 H1：自然融入核心关键词「隐形人官网」与「隐形人机场」，清晰表达主题 */}
             <h1
               id="hero-heading"
               className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-brand-text-heading leading-tight"
             >
-              <span className="text-brand-accent">{BRAND_NAME}</span> 网络连接指引：
+              <span className="text-brand-accent">{BRAND_NAME}官网</span>与{BRAND_NAME}机场选型指南：
               <span className="block text-brand-text-heading mt-2 sm:mt-3">
                 专注出海隐私与跨境远程协同
               </span>
@@ -78,7 +78,7 @@ export const Hero: React.FC = () => {
 
             {/* Hero 副标题：客观阐明服务主题与本站用途 */}
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
-              系统梳理{BRAND_NAME}（{BRAND_NAME_EN}）多端配置逻辑、协议分流机制与服务线路认知。为跨境开发者、出海科研与远程办公人员提供客观、透明的第三方使用指南与合作平台入口。
+              系统梳理{BRAND_NAME}官网（{BRAND_NAME_EN}）多端配置逻辑、{BRAND_NAME}机场协议分流机制与服务线路认知。为跨境开发者、出海科研与远程办公人员提供客观、透明的第三方使用指南与官方平台入口。
             </p>
 
             {/* CTA 操作按钮组 */}

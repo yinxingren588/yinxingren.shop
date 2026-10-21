@@ -11,6 +11,8 @@ export const OFFICIAL_URL = 'https://varnexa.invisibleaff.com/#/?code=JF4seZUy';
 
 export const PRIMARY_KEYWORD = '隐形人';
 export const SECONDARY_KEYWORD = '隐形人官网';
+export const TERTIARY_KEYWORD = '隐形人机场';
+export const CORE_KEYWORDS = ['隐形人', '隐形人官网', '隐形人机场'] as const;
 
 export const TELEGRAM_CHANNEL_URL = 'https://t.me/+diFXhmhTx-E4Mjc1'; // 官方频道链接
 export const TELEGRAM_GROUP_URL = 'https://t.me/+YnHn1D4JK7c2Yjg1'; // 交流群链接
@@ -45,6 +47,8 @@ export const SITE_CONFIG = {
   officialUrl: OFFICIAL_URL,
   primaryKeyword: PRIMARY_KEYWORD,
   secondaryKeyword: SECONDARY_KEYWORD,
+  tertiaryKeyword: TERTIARY_KEYWORD,
+  coreKeywords: CORE_KEYWORDS,
   telegramChannelUrl: TELEGRAM_CHANNEL_URL,
   telegramGroupUrl: TELEGRAM_GROUP_URL,
   identity: SITE_IDENTITY,

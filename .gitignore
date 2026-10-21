@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 scripts/.indexnow-pending.json
+scripts/.indexnow-history.json
 
 # Editor directories and files
 .vscode/*
