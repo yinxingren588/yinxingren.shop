@@ -75,15 +75,15 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-brand-border bg-brand-surface/90 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <header className="sticky top-0 z-40 w-full px-3 sm:px-6 lg:px-8 pt-3 pb-2 transition-all">
+      <div className="max-w-7xl mx-auto rounded-2xl bg-slate-900/85 backdrop-blur-xl border border-slate-700/60 shadow-[0_8px_32px_rgba(0,0,0,0.5),inset_0_1px_0_0_rgba(255,255,255,0.06)] px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Logo：仅能返回首页，不含 AFF */}
         <div className="flex-shrink-0">
           <Logo />
         </div>
 
         {/* 桌面端导航：普通栏目使用站内 Link */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8" aria-label="主要导航">
+        <nav className="hidden md:flex items-center gap-1.5 lg:gap-2 p-1 rounded-xl bg-slate-950/40 border border-slate-800/80" aria-label="主要导航">
           {navItems.map((item) => {
             const isActive =
               location.pathname === item.path ||
@@ -92,8 +92,10 @@ export const Navbar: React.FC = () => {
               <Link
                 key={item.id}
                 to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-brand-accent ${
-                  isActive ? 'text-brand-accent font-semibold' : 'text-slate-300'
+                className={`px-3.5 py-1.5 rounded-lg text-xs lg:text-sm font-medium transition-all ${
+                  isActive
+                    ? 'bg-emerald-500/10 text-emerald-400 font-semibold border border-emerald-500/25 shadow-sm'
+                    : 'text-slate-300 hover:text-white hover:bg-white/5'
                 }`}
               >
                 {item.navLabel}
@@ -105,7 +107,7 @@ export const Navbar: React.FC = () => {
         {/* 桌面端商业操作 CTA 入口（条款、隐私与404页面严格隐藏） */}
         <div className="hidden md:flex items-center gap-4">
           {showAff && (
-            <OfficialLink className="inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs md:text-sm font-medium text-black bg-brand-accent hover:bg-brand-accent-hover rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-brand-accent/50 shadow-subtle">
+            <OfficialLink className="inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs md:text-sm font-semibold text-slate-950 bg-gradient-to-r from-emerald-400 to-teal-400 hover:from-emerald-300 hover:to-teal-300 rounded-xl transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-emerald-400/50">
               <span>前往官方平台</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </OfficialLink>
@@ -115,7 +117,7 @@ export const Navbar: React.FC = () => {
         {/* 移动端菜单操作区 */}
         <div className="flex md:hidden items-center gap-2">
           {showAff && (
-            <OfficialLink className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-black bg-brand-accent hover:bg-brand-accent-hover rounded-lg transition-all mr-1">
+            <OfficialLink className="inline-flex items-center px-3 py-1.5 text-xs font-semibold text-slate-950 bg-gradient-to-r from-emerald-400 to-teal-400 hover:from-emerald-300 hover:to-teal-300 rounded-lg transition-all shadow-sm mr-1">
               <span>前往官方平台</span>
             </OfficialLink>
           )}
@@ -127,7 +129,7 @@ export const Navbar: React.FC = () => {
             aria-label={isOpen ? '关闭导航菜单' : '打开导航菜单'}
             aria-expanded={isOpen}
             aria-controls="mobile-nav-menu"
-            className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-brand-primary border border-brand-border focus:outline-none focus:ring-2 focus:ring-brand-accent transition-colors"
+            className="p-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-slate-700/60 focus:outline-none focus:ring-2 focus:ring-brand-accent transition-colors"
           >
             {isOpen ? <X className="w-5 h-5" aria-hidden="true" /> : <Menu className="w-5 h-5" aria-hidden="true" />}
           </button>
@@ -216,7 +218,7 @@ export const Navbar: React.FC = () => {
               {showAff ? (
                 <OfficialLink
                   onClick={() => setIsOpen(false)}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-black bg-brand-accent hover:bg-brand-accent-hover rounded-lg transition-all shadow-subtle"
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-slate-950 bg-gradient-to-r from-emerald-400 to-teal-400 hover:from-emerald-300 hover:to-teal-300 rounded-xl transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)]"
                 >
                   <span>前往官方平台</span>
                   <ArrowUpRight className="w-4 h-4" />

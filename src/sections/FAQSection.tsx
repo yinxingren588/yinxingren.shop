@@ -57,7 +57,7 @@ export const FAQSection: React.FC = () => {
             return (
               <div
                 key={item.id}
-                className="rounded-xl bg-brand-bg border border-brand-border overflow-hidden transition-colors hover:border-brand-border-hover shadow-subtle"
+                className="rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-slate-800/80 hover:border-slate-700/80 overflow-hidden transition-all duration-300 shadow-sm"
               >
                 <h3 className="text-base font-medium m-0">
                   <button
@@ -66,10 +66,10 @@ export const FAQSection: React.FC = () => {
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => toggleItem(item.id)}
-                    className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left text-brand-text-heading hover:text-brand-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent transition-colors"
+                    className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left text-brand-text-heading hover:text-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent transition-colors"
                   >
-                    <div className="flex items-center gap-3">
-                      <span className="text-xs font-mono text-brand-accent font-bold w-5">
+                    <div className="flex items-center gap-3.5">
+                      <span className="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono font-bold flex items-center justify-center text-xs">
                         {String(index + 1).padStart(2, '0')}
                       </span>
                       <span className="text-sm sm:text-base font-semibold">
@@ -78,8 +78,8 @@ export const FAQSection: React.FC = () => {
                     </div>
 
                     <div
-                      className={`w-7 h-7 rounded-lg bg-brand-primary border border-brand-border flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${
-                        isOpen ? 'rotate-180 text-brand-accent' : 'text-slate-400'
+                      className={`w-7 h-7 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${
+                        isOpen ? 'rotate-180 text-emerald-400 border-emerald-500/40' : 'text-slate-400'
                       }`}
                     >
                       <ChevronDown className="w-4 h-4" />
@@ -94,7 +94,7 @@ export const FAQSection: React.FC = () => {
                   aria-labelledby={buttonId}
                   className={`transition-all duration-300 ease-in-out ${
                     isOpen
-                      ? 'max-h-[500px] opacity-100 p-5 sm:p-6 pt-0 border-t border-brand-border/40'
+                      ? 'max-h-[500px] opacity-100 p-5 sm:p-6 pt-0 border-t border-slate-800/60'
                       : 'max-h-0 opacity-0 overflow-hidden p-0'
                   }`}
                 >

@@ -47,21 +47,21 @@ export const Hero: React.FC = () => {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative overflow-hidden pt-8 pb-16 sm:pt-12 sm:pb-20 lg:pt-16 lg:pb-24 border-b border-brand-border bg-gradient-to-b from-brand-bg via-brand-surface/60 to-brand-bg"
+      className="relative overflow-hidden pt-10 pb-16 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-28 border-b border-slate-800/80 bg-gradient-to-b from-brand-bg via-brand-surface/40 to-brand-bg"
     >
       {/* 潜行翡翠氛围微光 */}
       <div
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[580px] h-[280px] bg-brand-accent/5 blur-[120px] pointer-events-none rounded-full"
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[680px] h-[320px] bg-emerald-500/8 blur-[130px] pointer-events-none rounded-full"
         aria-hidden="true"
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
           {/* 左侧文案与操作区 (7列) */}
           <div className="lg:col-span-7 space-y-6 text-left">
             {/* 品牌定位短句 */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-primary border border-brand-border text-xs text-brand-accent font-semibold shadow-subtle">
-              <ShieldCheck className="w-4 h-4 text-brand-accent" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/30 text-xs text-emerald-400 font-semibold shadow-[0_0_15px_rgba(16,185,129,0.15)] backdrop-blur-md">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
               <span>隐形人官网导航 · 隐形人机场评测与出海连接认知指引</span>
             </div>
 
@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
               id="hero-heading"
               className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-brand-text-heading leading-tight"
             >
-              <span className="text-brand-accent">{BRAND_NAME}官网</span>与{BRAND_NAME}机场选型指南：
+              <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">{BRAND_NAME}官网</span>与{BRAND_NAME}机场选型指南：
               <span className="block text-brand-text-heading mt-2 sm:mt-3">
                 专注出海隐私与跨境远程协同
               </span>
@@ -84,7 +84,7 @@ export const Hero: React.FC = () => {
             {/* CTA 操作按钮组 */}
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               {/* 主 CTA：使用 OfficialLink 前往官方平台 */}
-              <OfficialLink className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-brand-accent hover:bg-brand-accent-hover text-black font-semibold text-sm sm:text-base transition-all shadow-subtle focus:outline-none focus:ring-2 focus:ring-brand-accent/50">
+              <OfficialLink className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-emerald-400 to-teal-400 hover:from-emerald-300 hover:to-teal-300 text-slate-950 font-bold text-sm sm:text-base transition-all shadow-[0_0_25px_rgba(16,185,129,0.35)] hover:shadow-[0_0_35px_rgba(16,185,129,0.55)] transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-emerald-400/50">
                 <span>前往官方平台</span>
                 <ArrowRight className="w-4 h-4" />
               </OfficialLink>
@@ -92,7 +92,7 @@ export const Hero: React.FC = () => {
               {/* 次 CTA：使用普通 Link 跳转 /pricing/ 页面 */}
               <Link
                 to="/pricing/"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-brand-surface hover:bg-brand-primary text-brand-text-heading hover:text-brand-accent font-medium text-sm sm:text-base border border-brand-border hover:border-brand-border-hover transition-all shadow-subtle focus:outline-none focus:ring-2 focus:ring-brand-accent/30"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white font-medium text-sm sm:text-base border border-slate-700/70 hover:border-slate-500 transition-all shadow-subtle backdrop-blur-md transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-slate-500/40"
               >
                 <SlidersHorizontal className="w-4 h-4 text-slate-400" />
                 <span>查看套餐选型指南</span>
@@ -104,16 +104,21 @@ export const Hero: React.FC = () => {
               {AFF_DISCLOSURE_TEXT}
             </p>
 
-            {/* 4 项简短客观卖点列表 */}
-            <div className="pt-6 border-t border-brand-border grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* 4 项简短客观卖点列表 - 现代 Bento 模块化卡片架构 */}
+            <div className="pt-6 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               {sellingPoints.map((point) => (
-                <div key={point.id} className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-brand-accent mt-0.5 flex-shrink-0" />
+                <div
+                  key={point.id}
+                  className="group relative p-3.5 rounded-xl bg-slate-900/50 hover:bg-slate-900/85 border border-slate-800/80 hover:border-emerald-500/30 transition-all duration-300 shadow-sm flex items-start gap-3 overflow-hidden"
+                >
+                  <div className="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0 text-brand-accent group-hover:scale-110 transition-transform">
+                    <CheckCircle2 className="w-4 h-4" />
+                  </div>
                   <div>
-                    <h2 className="text-xs sm:text-sm font-semibold text-brand-text-heading">
+                    <h2 className="text-xs sm:text-sm font-semibold text-brand-text-heading group-hover:text-emerald-400 transition-colors">
                       {point.title}
                     </h2>
-                    <p className="text-[11px] sm:text-xs text-slate-400 mt-0.5 leading-normal">
+                    <p className="text-[11px] sm:text-xs text-slate-400 mt-1 leading-relaxed">
                       {point.desc}
                     </p>
                   </div>

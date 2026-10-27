@@ -16,7 +16,10 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t border-brand-border bg-brand-surface text-slate-400">
+    <footer className="w-full border-t border-slate-800/80 bg-slate-950/90 text-slate-400 relative overflow-hidden backdrop-blur-md">
+      {/* 顶部科技感微弱渐变分隔线 */}
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent pointer-events-none" aria-hidden="true" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* 第1栏：品牌介绍与身份说明 */}
@@ -25,7 +28,7 @@ export const Footer: React.FC = () => {
             <p className="text-xs text-slate-400 leading-relaxed">
               {BRAND_NAME}（{BRAND_NAME_EN}）专注于提供客观的跨境网络连接服务指引与实用配置教程。
             </p>
-            <div className="p-3 rounded-lg bg-brand-primary/60 border border-brand-border text-[11px] text-slate-300 leading-relaxed">
+            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-[11px] text-slate-300 leading-relaxed shadow-sm">
               <span className="font-semibold text-brand-text-heading">身份声明：</span>
               本站为第三方信息展示与使用指引导航站点，非官方自营或授权直营平台。
             </div>

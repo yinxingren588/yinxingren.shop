@@ -16,7 +16,17 @@ export const MainLayout: React.FC = () => {
   useRouteSeo();
 
   return (
-    <div className="min-h-screen flex flex-col bg-brand-bg text-brand-text-body selection:bg-brand-accent selection:text-black">
+    <div className="min-h-screen flex flex-col bg-brand-bg text-brand-text-body selection:bg-brand-accent selection:text-black relative overflow-x-hidden">
+      {/* 现代分层环境光效与科技背景架构 */}
+      <div
+        className="fixed top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[550px] bg-gradient-to-b from-emerald-500/12 via-teal-500/5 to-transparent blur-[140px] pointer-events-none -z-10 rounded-full"
+        aria-hidden="true"
+      />
+      <div
+        className="fixed inset-0 bg-[linear-gradient(to_right,#1e293b0a_1px,transparent_1px),linear-gradient(to_bottom,#1e293b0a_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] pointer-events-none -z-10 [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,#000_65%,transparent_100%)]"
+        aria-hidden="true"
+      />
+
       {/* 顶部主导航栏 */}
       <Navbar />
 

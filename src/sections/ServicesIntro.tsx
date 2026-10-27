@@ -12,13 +12,13 @@ export const ServicesIntro: React.FC = () => {
   return (
     <section
       aria-labelledby="services-heading"
-      className="py-16 md:py-24 border-b border-brand-border bg-brand-bg"
+      className="py-16 md:py-24 border-b border-slate-800/80 bg-brand-bg relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* 左侧深度服务理念与架构阐述 (7列) */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary border border-brand-border text-xs text-brand-accent font-semibold shadow-subtle">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/30 text-xs text-emerald-400 font-semibold shadow-subtle">
               <span>架构概览 · 服务体系</span>
             </div>
 
@@ -40,7 +40,7 @@ export const ServicesIntro: React.FC = () => {
             <div className="pt-2">
               <Link
                 to="/services/"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-brand-accent hover:text-brand-accent-hover transition-colors group"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/70 hover:border-emerald-500/40 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-all shadow-subtle group"
               >
                 <span>查阅完整服务体系与协议指引</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -48,15 +48,15 @@ export const ServicesIntro: React.FC = () => {
             </div>
           </div>
 
-          {/* 右侧多维特性卡片栈 (5列) */}
+          {/* 右侧多维特性卡片栈 (5列) - 现代科技微质感卡片 */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="p-5 rounded-xl bg-brand-surface border border-brand-border hover:border-brand-border-hover transition-all shadow-subtle">
+            <div className="group p-5 rounded-2xl bg-gradient-to-r from-slate-900/70 to-slate-950/70 border border-slate-800/80 hover:border-emerald-500/30 transition-all duration-300 shadow-sm hover:shadow-[0_8px_25px_rgba(16,185,129,0.1)]">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-brand-primary border border-brand-border flex items-center justify-center text-brand-accent flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-brand-accent flex-shrink-0 group-hover:scale-110 transition-transform">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-brand-text-heading">
+                  <h3 className="text-sm font-semibold text-brand-text-heading group-hover:text-emerald-400 transition-colors">
                     流量特征混淆封装
                   </h3>
                   <p className="text-xs text-slate-400 mt-1 leading-relaxed">
@@ -66,13 +66,13 @@ export const ServicesIntro: React.FC = () => {
               </div>
             </div>
 
-            <div className="p-5 rounded-xl bg-brand-surface border border-brand-border hover:border-brand-border-hover transition-all shadow-subtle">
+            <div className="group p-5 rounded-2xl bg-gradient-to-r from-slate-900/70 to-slate-950/70 border border-slate-800/80 hover:border-emerald-500/30 transition-all duration-300 shadow-sm hover:shadow-[0_8px_25px_rgba(16,185,129,0.1)]">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-brand-primary border border-brand-border flex items-center justify-center text-brand-accent flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-brand-accent flex-shrink-0 group-hover:scale-110 transition-transform">
                   <Terminal className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-brand-text-heading">
+                  <h3 className="text-sm font-semibold text-brand-text-heading group-hover:text-emerald-400 transition-colors">
                     跨平台分流规则解耦
                   </h3>
                   <p className="text-xs text-slate-400 mt-1 leading-relaxed">
@@ -82,13 +82,13 @@ export const ServicesIntro: React.FC = () => {
               </div>
             </div>
 
-            <div className="p-5 rounded-xl bg-brand-surface border border-brand-border hover:border-brand-border-hover transition-all shadow-subtle">
+            <div className="group p-5 rounded-2xl bg-gradient-to-r from-slate-900/70 to-slate-950/70 border border-slate-800/80 hover:border-emerald-500/30 transition-all duration-300 shadow-sm hover:shadow-[0_8px_25px_rgba(16,185,129,0.1)]">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-brand-primary border border-brand-border flex items-center justify-center text-brand-accent flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-brand-accent flex-shrink-0 group-hover:scale-110 transition-transform">
                   <Layers className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-brand-text-heading">
+                  <h3 className="text-sm font-semibold text-brand-text-heading group-hover:text-emerald-400 transition-colors">
                     零门槛开箱指引
                   </h3>
                   <p className="text-xs text-slate-400 mt-1 leading-relaxed">

@@ -61,9 +61,9 @@ export const WorkflowSection: React.FC = () => {
 
         {/* 横向步骤流转轴布局 */}
         <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-          {/* 桌面端水平连接虚线 */}
+          {/* 桌面端水平连接高亮光路 */}
           <div
-            className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-[1px] border-t border-dashed border-brand-border -translate-y-8 pointer-events-none"
+            className="hidden md:block absolute top-[28%] left-[15%] right-[15%] h-[2px] bg-gradient-to-r from-emerald-500/0 via-emerald-400/30 to-emerald-500/0 pointer-events-none"
             aria-hidden="true"
           />
 
@@ -72,19 +72,19 @@ export const WorkflowSection: React.FC = () => {
             return (
               <div
                 key={index}
-                className="relative z-10 flex flex-col items-center text-center p-6 sm:p-8 rounded-2xl bg-brand-surface border border-brand-border shadow-card hover:border-brand-border-hover transition-all"
+                className="group relative z-10 flex flex-col items-center text-center p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-slate-800/80 hover:border-emerald-500/40 shadow-[0_8px_30px_rgba(0,0,0,0.4)] hover:shadow-[0_15px_40px_rgba(16,185,129,0.15)] transition-all duration-300 transform hover:-translate-y-1"
               >
                 {/* 序号与图标圆形徽章 */}
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-brand-primary border border-brand-border flex items-center justify-center text-brand-accent shadow-subtle">
+                  <div className="w-16 h-16 rounded-2xl bg-slate-900 border border-slate-700/80 group-hover:border-emerald-400/50 flex items-center justify-center text-emerald-400 shadow-subtle group-hover:scale-110 transition-transform">
                     <Icon className="w-7 h-7" />
                   </div>
-                  <span className="absolute -top-2 -right-2 px-2.5 py-0.5 rounded-full bg-brand-accent text-black text-[11px] font-mono font-bold shadow-sm">
+                  <span className="absolute -top-2 -right-2 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-emerald-400 to-teal-400 text-slate-950 text-[11px] font-mono font-bold shadow-sm">
                     {step.num}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-brand-text-heading mb-3">
+                <h3 className="text-lg font-bold text-brand-text-heading group-hover:text-emerald-400 transition-colors mb-3">
                   {step.title}
                 </h3>
 
@@ -92,7 +92,7 @@ export const WorkflowSection: React.FC = () => {
                   {step.description}
                 </p>
 
-                <div className="mt-auto w-full pt-4 border-t border-brand-border text-[11px] text-slate-400 font-mono">
+                <div className="mt-auto w-full pt-4 border-t border-slate-800/80 text-[11px] text-slate-400 font-mono">
                   {step.note}
                 </div>
               </div>
@@ -101,7 +101,7 @@ export const WorkflowSection: React.FC = () => {
         </div>
 
         {/* 流程底部说明与站内链接引导（0 AFF） */}
-        <div className="mt-12 p-5 rounded-xl bg-brand-surface/70 border border-brand-border text-center max-w-2xl mx-auto shadow-subtle">
+        <div className="mt-12 p-5 rounded-2xl bg-slate-900/70 border border-slate-800/80 text-center max-w-2xl mx-auto shadow-subtle backdrop-blur-sm">
           <div className="flex items-center justify-center gap-2 text-xs text-slate-300 mb-3">
             <ShieldCheck className="w-4 h-4 text-brand-accent" />
             <span>本站专注于使用指引与第三方客观解析，不设任何自有充值、收银或账户系统。</span>

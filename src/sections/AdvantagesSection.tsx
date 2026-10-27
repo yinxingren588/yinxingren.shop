@@ -47,12 +47,12 @@ export const AdvantagesSection: React.FC = () => {
   return (
     <section
       aria-labelledby="advantages-heading"
-      className="py-16 md:py-24 border-b border-brand-border bg-brand-surface"
+      className="py-16 md:py-24 border-b border-slate-800/80 bg-brand-surface/30 relative"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 头部标题区 */}
         <div className="max-w-3xl mb-12 text-left">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary border border-brand-border text-xs text-brand-accent font-semibold mb-4 shadow-subtle">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/30 text-xs text-emerald-400 font-semibold mb-4 shadow-subtle">
             <span>核心价值 · 架构优势</span>
           </div>
           <h2
@@ -66,26 +66,26 @@ export const AdvantagesSection: React.FC = () => {
           </p>
         </div>
 
-        {/* 2×2 错落架构网格 */}
+        {/* 2×2 现代科技 Bento 架构网格 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {advantages.map((item, index) => {
             const Icon = item.icon;
             return (
               <div
                 key={index}
-                className="group relative p-6 sm:p-8 rounded-2xl bg-brand-bg border border-brand-border hover:border-brand-border-hover transition-all flex flex-col justify-between shadow-subtle"
+                className="group relative p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-slate-900/85 via-slate-900/60 to-slate-950/85 border border-slate-800/80 hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_12px_35px_rgba(16,185,129,0.12)] transform hover:-translate-y-1"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-brand-primary border border-brand-border flex items-center justify-center text-brand-accent group-hover:scale-105 transition-transform shadow-subtle">
+                    <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-brand-accent group-hover:scale-110 transition-transform shadow-subtle">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-[11px] font-mono tracking-wider uppercase px-2.5 py-1 rounded bg-brand-primary border border-brand-border text-brand-accent font-semibold">
+                    <span className="text-[11px] font-mono tracking-wider uppercase px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-semibold">
                       {item.tag}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-brand-text-heading group-hover:text-brand-accent transition-colors mb-3">
+                  <h3 className="text-lg font-bold text-brand-text-heading group-hover:text-emerald-400 transition-colors mb-3">
                     {item.title}
                   </h3>
 
@@ -94,8 +94,8 @@ export const AdvantagesSection: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-brand-border flex items-center text-xs font-mono text-slate-500">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-accent mr-2" />
+                <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center text-xs font-mono text-slate-400">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2 animate-pulse" />
                   <span>{item.featureTag}</span>
                 </div>
               </div>
@@ -107,10 +107,10 @@ export const AdvantagesSection: React.FC = () => {
         <div className="mt-12 text-center">
           <Link
             to="/advantages/"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-primary hover:bg-brand-primary/80 border border-brand-border text-sm font-medium text-slate-200 hover:text-brand-accent transition-all shadow-subtle"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-700/70 hover:border-emerald-500/40 text-sm font-semibold text-slate-200 hover:text-white transition-all shadow-subtle group"
           >
             <span>深入了解核心优势与架构考量</span>
-            <ArrowRight className="w-4 h-4 text-brand-accent" />
+            <ArrowRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>
