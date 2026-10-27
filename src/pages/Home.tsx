@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { BRAND_NAME } from '@/config/site';
+import React from 'react';
 import {
   Hero,
   ServicesIntro,
@@ -26,10 +25,6 @@ import {
  * 9. 全球线路或服务范围 (LocationsScopeSection)
  */
 export const Home: React.FC = () => {
-  useEffect(() => {
-    document.title = `${BRAND_NAME} - 专注隐私网络与出海连接的信息导航站`;
-  }, []);
-
   return (
     <div className="w-full">
       {/* 首页 Hero 区域 */}

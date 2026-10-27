@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BRAND_NAME, BRAND_NAME_EN, AFF_DISCLOSURE_TEXT } from '@/config/site';
+import { AFF_DISCLOSURE_TEXT } from '@/config/site';
 import OfficialLink from '@/components/OfficialLink';
 import HeroVisual from '@/components/HeroVisual';
 import {
@@ -62,24 +62,31 @@ export const Hero: React.FC = () => {
             {/* 品牌定位短句 */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/30 text-xs text-emerald-400 font-semibold shadow-[0_0_15px_rgba(16,185,129,0.15)] backdrop-blur-md">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span>隐形人官网导航 · 隐形人机场评测与出海连接认知指引</span>
+              <span>隐形人官网 · 跨境网络连接与多端配置指南</span>
             </div>
 
-            {/* 页面唯一 H1：自然融入核心关键词「隐形人官网」与「隐形人机场」，清晰表达主题 */}
-            <h1
-              id="hero-heading"
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-brand-text-heading leading-tight"
-            >
-              <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">{BRAND_NAME}官网</span>与{BRAND_NAME}机场选型指南：
-              <span className="block text-brand-text-heading mt-2 sm:mt-3">
-                专注出海隐私与跨境远程协同
-              </span>
-            </h1>
+            {/* 核心排版体系：H1 主标题 -> 副标题 -> 品牌介绍 */}
+            <div className="space-y-4 sm:space-y-5">
+              {/* 一、主标题 H1：全页唯一，现代专业字体，品牌绿色渐变 */}
+              <h1
+                id="hero-heading"
+                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight select-none"
+              >
+                <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent inline-block">
+                  隐形人官网
+                </span>
+              </h1>
 
-            {/* Hero 副标题：客观阐明服务主题与本站用途 */}
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
-              系统梳理{BRAND_NAME}官网（{BRAND_NAME_EN}）多端配置逻辑、{BRAND_NAME}机场协议分流机制与服务线路认知。为跨境开发者、出海科研与远程办公人员提供客观、透明的第三方使用指南与官方平台入口。
-            </p>
+              {/* 二、副标题：置于 H1 下方，白色，层级分明，专业简洁，避免不自然断词 */}
+              <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-white tracking-wide leading-snug break-keep">
+                隐形人机场 · 跨境网络连接与使用指南
+              </p>
+
+              {/* 三、品牌介绍：浅灰色，自然专业，避免关键词堆砌，响应式自适应排版 */}
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl font-normal pt-1">
+                专注于隐形人机场的服务介绍、客户端下载、节点配置及使用教程，为用户提供清晰、专业的跨境网络连接指南，帮助用户了解不同设备的配置方式与常见问题解决方案。
+              </p>
+            </div>
 
             {/* CTA 操作按钮组 */}
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
